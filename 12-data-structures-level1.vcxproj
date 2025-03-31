@@ -130,6 +130,7 @@
     <ClCompile Include="12-data-structures-level1.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Stack_Swap.h" />
     <ClInclude Include="STL_Stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
