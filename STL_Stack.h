@@ -7,6 +7,7 @@ namespace STL_Stack {
 
 	void Task() {
 
+		//LIFO: Last In First Out
 		stack <int> stkNumbers;
 
 		stkNumbers.push(10);
