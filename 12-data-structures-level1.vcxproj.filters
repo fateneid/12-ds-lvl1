@@ -32,5 +32,8 @@
     <ClInclude Include="Queue_Swap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Singly_Linked_List.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
