@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="Queue_Swap.h" />
     <ClInclude Include="Singly_Linked_List.h" />
+    <ClInclude Include="Singly_Linked_List_Operations.h" />
     <ClInclude Include="Stack_Swap.h" />
     <ClInclude Include="STL_Queue.h" />
     <ClInclude Include="STL_Stack.h" />
