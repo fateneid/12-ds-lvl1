@@ -30,6 +30,22 @@ namespace Singly_Linked_List_Operations {
 		}
 	}
 
+	// Find
+	Node* Find(Node* head, int value) {
+
+		while (head != NULL) {
+
+			if (head->value == value) {
+				return head;
+			}
+
+			head = head->next;
+		}
+
+		return NULL;
+
+	}
+
 	void Task() {
 
 		Node* head = NULL;
@@ -41,6 +57,14 @@ namespace Singly_Linked_List_Operations {
 		InsertAtBeginning(head, 5);
 
 		PrintList(head);
+
+		Node* N1 = Find(head, 2);
+
+		if (N1 != NULL)
+			cout << "\nNode Found :-)\n";
+		else
+			cout << "\nNode Is not found :-(\n";
+
 
 	}
 
