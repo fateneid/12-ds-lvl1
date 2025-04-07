@@ -46,6 +46,21 @@ namespace Singly_Linked_List_Operations {
 
 	}
 
+	// Insert After
+	void InsertAfter(Node* prev_node, int value) {
+
+		if (prev_node == NULL) {
+			cout << "the given previous node cannot be NULL";
+			return;
+		}
+
+		Node* new_node = new Node();
+		new_node->value = value;
+		new_node->next = prev_node->next;
+		prev_node->next = new_node;
+
+	}
+
 	void Task() {
 
 		Node* head = NULL;
@@ -60,11 +75,14 @@ namespace Singly_Linked_List_Operations {
 
 		Node* N1 = Find(head, 2);
 
-		if (N1 != NULL)
-			cout << "\nNode Found :-)\n";
-		else
-			cout << "\nNode Is not found :-(\n";
+		//if (N1 != NULL)
+		//	cout << "\nNode Found :-)\n";
+		//else
+		//	cout << "\nNode Is not found :-(\n";
 
+		InsertAfter(N1, 500);
+
+		PrintList(head);
 
 	}
 
