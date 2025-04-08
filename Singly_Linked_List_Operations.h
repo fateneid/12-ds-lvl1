@@ -24,6 +24,7 @@ namespace Singly_Linked_List_Operations {
 
 	void PrintList(Node* head)
 	{
+		cout << '\n';
 		while (head != NULL) {
 			cout << head->value << " ";
 			head = head->next;
@@ -61,28 +62,59 @@ namespace Singly_Linked_List_Operations {
 
 	}
 
+	// Insert At End
+	void InsertAtEnd(Node* &head, int value) {
+
+		Node* new_node = new Node();
+		new_node->value = value;
+		new_node->next = NULL;
+
+		if (head == NULL) {
+			head = new_node;
+			return;
+		}
+
+		Node* LastNode = head;
+		while (LastNode->next != NULL) {
+			LastNode = LastNode->next;
+		}
+
+		LastNode->next = new_node;
+		return;
+
+	}
+
 	void Task() {
 
 		Node* head = NULL;
 
-		InsertAtBeginning(head, 1);
-		InsertAtBeginning(head, 2);
-		InsertAtBeginning(head, 3);
-		InsertAtBeginning(head, 4);
-		InsertAtBeginning(head, 5);
+		//InsertAtBeginning(head, 1);
+		//InsertAtBeginning(head, 2);
+		//InsertAtBeginning(head, 3);
+		//InsertAtBeginning(head, 4);
+		//InsertAtBeginning(head, 5);
 
-		PrintList(head);
+		//PrintList(head);
 
-		Node* N1 = Find(head, 2);
+		//Node* N1 = Find(head, 2);
 
 		//if (N1 != NULL)
 		//	cout << "\nNode Found :-)\n";
 		//else
 		//	cout << "\nNode Is not found :-(\n";
 
-		InsertAfter(N1, 500);
+		//InsertAfter(N1, 500);
+
+		//PrintList(head);
+
+		InsertAtEnd(head, 1);
+		InsertAtEnd(head, 2);
+		InsertAtEnd(head, 3);
+		InsertAtBeginning(head, 0);
 
 		PrintList(head);
+
+		system("pause>0");
 
 	}
 
