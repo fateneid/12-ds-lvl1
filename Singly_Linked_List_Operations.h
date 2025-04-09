@@ -84,6 +84,31 @@ namespace Singly_Linked_List_Operations {
 
 	}
 
+	// Delete A Node
+	void DeleteNode(Node*& head, int value) {
+
+		Node* Current = head, * Prev = head;
+
+		if (head == NULL) return;
+
+		if (Current->value == value) {
+			head = Current->next;
+			delete Current; //free from memory
+			return;
+		}
+
+		while (Current != NULL && Current->value != value) {
+			Prev = Current;
+			Current = Current->next;
+		}
+
+		if (Current == NULL) return;
+
+		Prev->next = Current->next;
+		delete Current;
+
+	}
+
 	void Task() {
 
 		Node* head = NULL;
@@ -107,11 +132,24 @@ namespace Singly_Linked_List_Operations {
 
 		//PrintList(head);
 
+		//InsertAtEnd(head, 1);
+		//InsertAtEnd(head, 2);
+		//InsertAtEnd(head, 3);
+		//InsertAtBeginning(head, 0);
+
+		//PrintList(head);
+
 		InsertAtEnd(head, 1);
 		InsertAtEnd(head, 2);
 		InsertAtEnd(head, 3);
-		InsertAtBeginning(head, 0);
+		InsertAtEnd(head, 4);
+		InsertAtEnd(head, 5);
+		InsertAtEnd(head, 6);
+		PrintList(head);
 
+
+
+		DeleteNode(head, 4);
 		PrintList(head);
 
 		system("pause>0");
