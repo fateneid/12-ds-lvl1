@@ -85,7 +85,7 @@ namespace Singly_Linked_List_Operations {
 	}
 
 	// Delete A Node
-	void DeleteNode(Node*& head, int value) {
+	void DeleteNode(Node* &head, int value) {
 
 		Node* Current = head, * Prev = head;
 
@@ -106,6 +106,19 @@ namespace Singly_Linked_List_Operations {
 
 		Prev->next = Current->next;
 		delete Current;
+
+	}
+
+	// Delete First Node
+	void DeleteFirstNode(Node*& head) {
+
+		if (head == NULL) return;
+
+		Node* Current = head;
+		head = Current->next;
+		delete Current;
+
+		return;
 
 	}
 
@@ -148,8 +161,7 @@ namespace Singly_Linked_List_Operations {
 		PrintList(head);
 
 
-
-		DeleteNode(head, 4);
+		DeleteFirstNode(head);
 		PrintList(head);
 
 		system("pause>0");
