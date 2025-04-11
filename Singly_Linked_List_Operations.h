@@ -110,7 +110,7 @@ namespace Singly_Linked_List_Operations {
 	}
 
 	// Delete First Node
-	void DeleteFirstNode(Node*& head) {
+	void DeleteFirstNode(Node* &head) {
 
 		if (head == NULL) return;
 
@@ -119,6 +119,29 @@ namespace Singly_Linked_List_Operations {
 		delete Current;
 
 		return;
+
+	}
+
+	// Delete Last Node
+	void DeleteLastNode(Node*& head) {
+
+		Node* Current = head, * Prev = head;
+
+		if (head == NULL) return;
+
+		if (Current->next == NULL) {
+			head = NULL;
+			delete Current;
+			return;
+		}
+
+		while (Current != NULL && Current->next != NULL) {
+			Prev = Current;
+			Current = Current->next;
+		}
+
+		Prev->next = NULL;
+		delete Current;
 
 	}
 
@@ -161,7 +184,10 @@ namespace Singly_Linked_List_Operations {
 		PrintList(head);
 
 
-		DeleteFirstNode(head);
+		//DeleteFirstNode(head);
+
+		DeleteLastNode(head);
+
 		PrintList(head);
 
 		system("pause>0");
