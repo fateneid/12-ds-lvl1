@@ -6,12 +6,13 @@
 #include "Singly_Linked_List.h"
 #include "Singly_Linked_List_Operations.h"
 #include "Doubly_Linked_List.h"
+#include "Doubly_Linked_List_Operations.h"
 using namespace std;
 
 int main()
 {
 
-	Doubly_Linked_List::Task();
+	Doubly_Linked_List_Operations::Task();
 
 
 }
