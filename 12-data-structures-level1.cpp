@@ -5,12 +5,13 @@
 #include "Queue_Swap.h"
 #include "Singly_Linked_List.h"
 #include "Singly_Linked_List_Operations.h"
+#include "Doubly_Linked_List.h"
 using namespace std;
 
 int main()
 {
 
-	Singly_Linked_List_Operations::Task();
+	Doubly_Linked_List::Task();
 
 
 }
