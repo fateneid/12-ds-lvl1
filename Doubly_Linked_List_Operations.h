@@ -65,6 +65,17 @@ namespace Doubly_Linked_List_Operations {
 		head = new_node;
 	}
 
+	// Find Node
+	Node* Find(Node* head, int value) {
+
+		while (head != NULL && head->value != value) {
+			head = head->next;
+		}
+
+		return head;
+
+	}
+
 	void Task() {
 		
 		Node* head = NULL;
@@ -79,6 +90,14 @@ namespace Doubly_Linked_List_Operations {
 		PrintList(head);
 		cout << "\n\n";
 		PrintListDetails(head);
+
+		Node* N1 = Find(head, 4);
+
+		if (N1 != NULL)
+			cout << "\n\n Node Found :-)\n";
+		else
+			cout << "\n\n Node Is not found :-(\n";
+
 
 		system("pause>0");
 
