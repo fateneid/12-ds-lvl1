@@ -93,6 +93,30 @@ namespace Doubly_Linked_List_Operations {
 
 	}
 
+	// Insert at End
+	void InsertAtEnd(Node* &head, int value) {
+
+		Node* new_node = new Node();
+
+		new_node->value = value;
+		new_node->next = NULL;
+		
+		if (head == NULL) {
+			new_node->prev = NULL;
+			head = new_node;
+			return;
+		}
+
+		Node* current = head;
+		while (current->next != NULL) {
+			current = current->next;
+		}
+
+		current->next = new_node;
+		new_node->prev = current;
+
+	}
+
 	void Task() {
 		
 		Node* head = NULL;
@@ -116,7 +140,9 @@ namespace Doubly_Linked_List_Operations {
 		//	cout << "\n\n Node Is not found :-(\n";
 
 		cout << "\n\n";
-		InsertAfter(N1, 500);
+		//InsertAfter(N1, 500);
+
+		InsertAtEnd(head, 500);
 
 		cout << "\nLinked List Contenet:\n";
 		PrintList(head);
