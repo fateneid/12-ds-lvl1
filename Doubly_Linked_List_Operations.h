@@ -117,6 +117,24 @@ namespace Doubly_Linked_List_Operations {
 
 	}
 
+	// Delete Node
+	void DeleteNode(Node*& head, Node*& node_to_delete) {
+
+		if (head == NULL || node_to_delete == NULL) return;
+
+		if (head == node_to_delete)
+			head = node_to_delete->next;
+
+		if (node_to_delete->next != NULL)
+			node_to_delete->next->prev = node_to_delete->prev;
+
+		if (node_to_delete->prev != NULL)
+			node_to_delete->prev->next = node_to_delete->next;
+
+		delete node_to_delete;
+
+	}
+
 	void Task() {
 		
 		Node* head = NULL;
@@ -142,7 +160,9 @@ namespace Doubly_Linked_List_Operations {
 		cout << "\n\n";
 		//InsertAfter(N1, 500);
 
-		InsertAtEnd(head, 500);
+		//InsertAtEnd(head, 500);
+
+		DeleteNode(head, N1);
 
 		cout << "\nLinked List Contenet:\n";
 		PrintList(head);
