@@ -151,6 +151,28 @@ namespace Doubly_Linked_List_Operations {
 
 	}
 
+	// Delete Last Node
+	void DeleteLastNode(Node*& head) {
+
+		if (head == NULL) return;
+
+		if (head->next == NULL) {
+			delete head;
+			head = NULL;
+			return;
+		}
+
+		Node* current = head;
+
+		while (current->next != NULL) {
+			current = current->next;
+		}
+
+		current->prev->next = NULL;
+		delete current;
+
+	}
+
 	void Task() {
 		
 		Node* head = NULL;
@@ -180,7 +202,9 @@ namespace Doubly_Linked_List_Operations {
 
 		//DeleteNode(head, N1);
 
-		DeleteFirstNode(head);
+		//DeleteFirstNode(head);
+
+		DeleteLastNode(head);
 
 		cout << "\nLinked List Contenet:\n";
 		PrintList(head);
