@@ -139,6 +139,7 @@
     <ClInclude Include="Stack_Swap.h" />
     <ClInclude Include="STL_Queue.h" />
     <ClInclude Include="STL_Stack.h" />
+    <ClInclude Include="Union.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

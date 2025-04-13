@@ -8,12 +8,13 @@
 #include "Doubly_Linked_List.h"
 #include "Doubly_Linked_List_Operations.h"
 #include "Map.h"
+#include "Union.h"
 using namespace std;
 
 int main()
 {
 
-	Map::Task();
+	Union::Task();
 
 
 }
