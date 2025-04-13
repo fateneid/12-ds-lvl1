@@ -76,6 +76,23 @@ namespace Doubly_Linked_List_Operations {
 
 	}
 
+	// Insert After
+	void InsertAfter(Node* current, int value) {
+
+		Node* new_node = new Node();
+
+		new_node->value = value;		
+		new_node->prev = current;
+		new_node->next = current->next;
+
+		if (current->next != NULL) {
+			current->next->prev = new_node;
+		}
+
+		current->next = new_node;
+
+	}
+
 	void Task() {
 		
 		Node* head = NULL;
@@ -93,11 +110,18 @@ namespace Doubly_Linked_List_Operations {
 
 		Node* N1 = Find(head, 4);
 
-		if (N1 != NULL)
-			cout << "\n\n Node Found :-)\n";
-		else
-			cout << "\n\n Node Is not found :-(\n";
+		//if (N1 != NULL)
+		//	cout << "\n\n Node Found :-)\n";
+		//else
+		//	cout << "\n\n Node Is not found :-(\n";
 
+		cout << "\n\n";
+		InsertAfter(N1, 500);
+
+		cout << "\nLinked List Contenet:\n";
+		PrintList(head);
+		cout << "\n\n";
+		PrintListDetails(head);
 
 		system("pause>0");
 
