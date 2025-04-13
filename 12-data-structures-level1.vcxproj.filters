@@ -44,5 +44,8 @@
     <ClInclude Include="Doubly_Linked_List_Operations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

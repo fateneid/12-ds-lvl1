@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="Doubly_Linked_List.h" />
     <ClInclude Include="Doubly_Linked_List_Operations.h" />
+    <ClInclude Include="Map.h" />
     <ClInclude Include="Queue_Swap.h" />
     <ClInclude Include="Singly_Linked_List.h" />
     <ClInclude Include="Singly_Linked_List_Operations.h" />

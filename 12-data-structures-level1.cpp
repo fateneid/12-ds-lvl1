@@ -7,12 +7,13 @@
 #include "Singly_Linked_List_Operations.h"
 #include "Doubly_Linked_List.h"
 #include "Doubly_Linked_List_Operations.h"
+#include "Map.h"
 using namespace std;
 
 int main()
 {
 
-	Doubly_Linked_List_Operations::Task();
+	Map::Task();
 
 
 }
